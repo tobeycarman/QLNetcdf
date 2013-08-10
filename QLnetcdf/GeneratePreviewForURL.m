@@ -21,56 +21,44 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
 {
     // To complete your generator please implement the function GeneratePreviewForURL in GeneratePreviewForURL.c
     @autoreleasepool {
-
-        int status, ncid, ndims, nvars, ngatts, unlimdimid;
-
         NSString* filepath = (__bridge NSString*)CFURLCopyFileSystemPath(url, kCFURLPOSIXPathStyle);
         
-        const char * cfilepath = filepath.UTF8String;
-        status = nc_open(cfilepath, NC_NOWRITE, &ncid);
-        if (status != NC_NOERR) handle_error(status);
         
-        status = nc_inq(ncid, &ndims, &nvars, &ngatts, &unlimdimid);
-        if (status != NC_NOERR) handle_error(status);
-
-        NSString * data = [NSString stringWithFormat:@"NetCDF file %i = {\n"
-                           "  Dimensions: %i\n"
-                           "  Variables: %i\n"
-                           "  Attributes: %i\n"
-                           "  Unlimited Dim: %i\n"
-                           " }\n", ncid, ndims, nvars, ngatts, unlimdimid
-                           ];
-        NSLog(@"QLnetcdt basic inquiry for %s", cfilepath);
-        NSLog(data);
+        /* pretty much directly copied from here:
+         http://stackoverflow.com/questions/412562/execute-a-terminal-command-from-a-cocoa-app/696942#696942
+        */
+        NSTask *task;
+        task = [[NSTask alloc] init];
+        [task setLaunchPath: @"/usr/local/bin/ncdump"];
         
-
-        for (int curvar_id = 0; curvar_id < nvars; ++curvar_id){
-            char curvar_name[NC_MAX_NAME+1];      /* variable name */
-            nc_type curvar_type;                   /* variable type */
-            int curvar_ndims;                      /* number of dims */
-            int curvar_dimids[NC_MAX_VAR_DIMS];    /* dimension IDs */
-            int curvar_natts;                      /* number of attributes */
-
-            /* we don't need name, since we already know it */
-            status = nc_inq_var(ncid, curvar_id, curvar_name, &curvar_type, &curvar_ndims, curvar_dimids,
-                                 &curvar_natts);
-            if (status != NC_NOERR) handle_error(status);
-            NSString * vardata = [NSString stringWithFormat:@"Variable Name: %s\n"
-                               "  Type: %i\n"
-                               "  Number of Dims: %i\n"
-                               "  Dim id[0]: %i\n"
-                               "  Attributes: %i\n"
-                               " }\n", curvar_name, curvar_type, curvar_ndims, curvar_dimids[1], curvar_natts
-                               ];
-            NSLog(vardata);
-        }
+        NSArray *arguments;
+        arguments = [NSArray arrayWithObjects: @"-h", filepath, nil];
+        [task setArguments: arguments];
         
+        NSPipe *pipe;
+        pipe = [NSPipe pipe];
+        [task setStandardOutput: pipe];
         
+        NSFileHandle *file;
+        file = [pipe fileHandleForReading];
         
-
-        //NSLog(@"Netcdf (status: %i), (ncid: %i), (ndims: %i), (nvars: %i), (ngatts: %i), (unlimdimid: %i),",
-        //      status, ncid, ndims, nvars, ngatts, unlimdimid);
-
+        [task launch];
+        
+        NSData *data;
+        data = [file readDataToEndOfFile];
+        
+        NSString *ncdump_result;
+        ncdump_result = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+        //NSLog (@"ncdump returned:\n%@", ncdump_result);
+        
+        NSData* ncdumpdata = [ncdump_result dataUsingEncoding:NSUTF8StringEncoding];
+        
+        // Pass preview data to QuickLook
+        QLPreviewRequestSetDataRepresentation(preview,
+                                              (__bridge CFDataRef)ncdumpdata,
+                                              kUTTypePlainText,
+                                              NULL);
+        
     }
 
     return noErr;
@@ -79,13 +67,4 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
 void CancelPreviewGeneration(void *thisInterface, QLPreviewRequestRef preview)
 {
     // Implement only if supported
-}
-
-/* Handles a netcdf error. */
-void handle_error(int status) {
-    if (status != NC_NOERR) {
-        NSLog(@"QLnetcdf generator is having problems trying to open a file. See stderr.");
-        fprintf(stderr, "%s\n", nc_strerror(status));
-        exit(-1);
-    }
 }
