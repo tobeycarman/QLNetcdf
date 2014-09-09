@@ -5,7 +5,7 @@ A QuickLook Plugin for previewing
 when navigating in OSX Finder to view the "header" (info ouput by `ncdump -h`) 
 for NetCDF files.
 
-** Requires that ncdump is installed at `/usr/local/bin`! **
+__Requires that `ncdump` is installed at `/usr/local/bin` !__
 
 Fortunately if you installed `netcdf` using [Homebrew](http://brew.sh) (with 
 the default settings) then `ncdump` should exist in the correct location 
