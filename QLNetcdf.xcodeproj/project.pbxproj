@@ -15,7 +15,9 @@
 		E11FA4A517B544390025C62B /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = E11FA4A417B544390025C62B /* GenerateThumbnailForURL.m */; };
 		E11FA4A717B544390025C62B /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = E11FA4A617B544390025C62B /* GeneratePreviewForURL.m */; };
 		E11FA4A917B544390025C62B /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E11FA4A817B544390025C62B /* main.c */; };
-		E11FA4B417B558E70025C62B /* QLnetcdf.qlgenerator in CopyFiles */ = {isa = PBXBuildFile; fileRef = E11FA49317B544390025C62B /* QLnetcdf.qlgenerator */; };
+		E11FA4B417B558E70025C62B /* QLNetcdf.temp_caseinsensitive_rename.qlgenerator in CopyFiles */ = {isa = PBXBuildFile; fileRef = E11FA49317B544390025C62B /* QLNetcdf.temp_caseinsensitive_rename.qlgenerator */; };
+		E1E2722C19BF6B280065F311 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E1E2722A19BF6B280065F311 /* LICENSE */; };
+		E1E2722D19BF6B280065F311 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E1E2722B19BF6B280065F311 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,24 +27,26 @@
 			dstPath = "~/Library/QuickLook";
 			dstSubfolderSpec = 0;
 			files = (
-				E11FA4B417B558E70025C62B /* QLnetcdf.qlgenerator in CopyFiles */,
+				E11FA4B417B558E70025C62B /* QLNetcdf.temp_caseinsensitive_rename.qlgenerator in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E11FA49317B544390025C62B /* QLnetcdf.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QLnetcdf.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
+		E11FA49317B544390025C62B /* QLNetcdf.temp_caseinsensitive_rename.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QLNetcdf.temp_caseinsensitive_rename.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		E11FA49617B544390025C62B /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		E11FA49817B544390025C62B /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		E11FA49A17B544390025C62B /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		E11FA49C17B544390025C62B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		E11FA4A017B544390025C62B /* QLnetcdf-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QLnetcdf-Info.plist"; sourceTree = "<group>"; };
+		E11FA4A017B544390025C62B /* QLNetcdf.temp_caseinsensitive_rename-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QLNetcdf.temp_caseinsensitive_rename-Info.plist"; sourceTree = "<group>"; };
 		E11FA4A217B544390025C62B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E11FA4A417B544390025C62B /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateThumbnailForURL.m; sourceTree = "<group>"; };
 		E11FA4A617B544390025C62B /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
 		E11FA4A817B544390025C62B /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		E11FA4AA17B544390025C62B /* QLnetcdf-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QLnetcdf-Prefix.pch"; sourceTree = "<group>"; };
+		E11FA4AA17B544390025C62B /* QLNetcdf.temp_caseinsensitive_rename-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QLNetcdf.temp_caseinsensitive_rename-Prefix.pch"; sourceTree = "<group>"; };
+		E1E2722A19BF6B280065F311 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E1E2722B19BF6B280065F311 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +67,9 @@
 		E11FA48817B544390025C62B = {
 			isa = PBXGroup;
 			children = (
-				E11FA49E17B544390025C62B /* QLnetcdf */,
+				E1E2722A19BF6B280065F311 /* LICENSE */,
+				E1E2722B19BF6B280065F311 /* README.md */,
+				E11FA49E17B544390025C62B /* QLNetcdf */,
 				E11FA49517B544390025C62B /* Frameworks */,
 				E11FA49417B544390025C62B /* Products */,
 			);
@@ -72,7 +78,7 @@
 		E11FA49417B544390025C62B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E11FA49317B544390025C62B /* QLnetcdf.qlgenerator */,
+				E11FA49317B544390025C62B /* QLNetcdf.temp_caseinsensitive_rename.qlgenerator */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,7 +94,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E11FA49E17B544390025C62B /* QLnetcdf */ = {
+		E11FA49E17B544390025C62B /* QLNetcdf */ = {
 			isa = PBXGroup;
 			children = (
 				E11FA4A417B544390025C62B /* GenerateThumbnailForURL.m */,
@@ -96,15 +102,16 @@
 				E11FA4A817B544390025C62B /* main.c */,
 				E11FA49F17B544390025C62B /* Supporting Files */,
 			);
-			path = QLnetcdf;
+			name = QLNetcdf;
+			path = QLNetcdf;
 			sourceTree = "<group>";
 		};
 		E11FA49F17B544390025C62B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E11FA4A017B544390025C62B /* QLnetcdf-Info.plist */,
+				E11FA4A017B544390025C62B /* QLNetcdf.temp_caseinsensitive_rename-Info.plist */,
 				E11FA4A117B544390025C62B /* InfoPlist.strings */,
-				E11FA4AA17B544390025C62B /* QLnetcdf-Prefix.pch */,
+				E11FA4AA17B544390025C62B /* QLNetcdf.temp_caseinsensitive_rename-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -122,9 +129,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E11FA49217B544390025C62B /* QLnetcdf */ = {
+		E11FA49217B544390025C62B /* QLNetcdf.temp_caseinsensitive_rename */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E11FA4AD17B544390025C62B /* Build configuration list for PBXNativeTarget "QLnetcdf" */;
+			buildConfigurationList = E11FA4AD17B544390025C62B /* Build configuration list for PBXNativeTarget "QLNetcdf.temp_caseinsensitive_rename" */;
 			buildPhases = (
 				E11FA48D17B544390025C62B /* Sources */,
 				E11FA48E17B544390025C62B /* Frameworks */,
@@ -137,9 +144,9 @@
 			);
 			dependencies = (
 			);
-			name = QLnetcdf;
-			productName = QLnetcdf;
-			productReference = E11FA49317B544390025C62B /* QLnetcdf.qlgenerator */;
+			name = QLNetcdf.temp_caseinsensitive_rename;
+			productName = QLNetcdf;
+			productReference = E11FA49317B544390025C62B /* QLNetcdf.temp_caseinsensitive_rename.qlgenerator */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -148,10 +155,10 @@
 		E11FA48917B544390025C62B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = tbc;
 			};
-			buildConfigurationList = E11FA48C17B544390025C62B /* Build configuration list for PBXProject "QLnetcdf" */;
+			buildConfigurationList = E11FA48C17B544390025C62B /* Build configuration list for PBXProject "QLNetcdf" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -163,7 +170,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E11FA49217B544390025C62B /* QLnetcdf */,
+				E11FA49217B544390025C62B /* QLNetcdf.temp_caseinsensitive_rename */,
 			);
 		};
 /* End PBXProject section */
@@ -173,6 +180,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1E2722D19BF6B280065F311 /* README.md in Resources */,
+				E1E2722C19BF6B280065F311 /* LICENSE in Resources */,
 				E11FA4A317B544390025C62B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,7 +227,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -251,7 +259,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -278,13 +285,13 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "QLnetcdf/QLnetcdf-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = /usr/local/include;
-				INFOPLIST_FILE = "QLnetcdf/QLnetcdf-Info.plist";
+				INFOPLIST_FILE = "";
 				INSTALL_PATH = /Library/QuickLook;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				OTHER_LDFLAGS = "-lnetcdf";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = QLNetcdf.temp_caseinsensitive_rename;
 				WRAPPER_EXTENSION = qlgenerator;
 			};
 			name = Debug;
@@ -294,13 +301,13 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "QLnetcdf/QLnetcdf-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = /usr/local/include;
-				INFOPLIST_FILE = "QLnetcdf/QLnetcdf-Info.plist";
+				INFOPLIST_FILE = "";
 				INSTALL_PATH = /Library/QuickLook;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				OTHER_LDFLAGS = "-lnetcdf";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = QLNetcdf.temp_caseinsensitive_rename;
 				WRAPPER_EXTENSION = qlgenerator;
 			};
 			name = Release;
@@ -308,7 +315,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E11FA48C17B544390025C62B /* Build configuration list for PBXProject "QLnetcdf" */ = {
+		E11FA48C17B544390025C62B /* Build configuration list for PBXProject "QLNetcdf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E11FA4AB17B544390025C62B /* Debug */,
@@ -317,13 +324,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E11FA4AD17B544390025C62B /* Build configuration list for PBXNativeTarget "QLnetcdf" */ = {
+		E11FA4AD17B544390025C62B /* Build configuration list for PBXNativeTarget "QLNetcdf.temp_caseinsensitive_rename" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E11FA4AE17B544390025C62B /* Debug */,
 				E11FA4AF17B544390025C62B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
