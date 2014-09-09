@@ -1,0 +1,4 @@
+
+# user specific xcode files
+QLNetcdf.xcodeproj/project.xcworkspace/*
+QLNetcdf.xcodeproj/xcuserdata/*
