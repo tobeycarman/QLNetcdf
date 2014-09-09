@@ -14,7 +14,7 @@ already.
 Installing
 -----------
 Download one of the releases and copy the QLNetcdf.qlgenerator file to your 
-'~/Library/QuickLook/` directory (or `/Library/QuickLook/` to make the plugin 
+`~/Library/QuickLook/` directory (or `/Library/QuickLook/` to make the plugin 
 available to all users).
 
 You may have to force the QuickLook Server to reload so it picks up the new 
