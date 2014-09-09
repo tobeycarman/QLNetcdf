@@ -1,27 +1,29 @@
-QLnetcdf
+QLNetcdf
 ========
+A QuickLook Plugin for previewing 
+[NetCDF](http://www.unidata.ucar.edu/software/netcdf/) files. Use 'spacebar' 
+when navigating in OSX Finder to view the "header" (info ouput by `ncdump -h`) 
+for NetCDF files.
 
-A QuickLook Plugin for previewing NetCDF files.
+** Requires that ncdump is installed at `/usr/local/bin`! **
 
-Requires netcdf and ncdump. 
-
-Expects netcdf and ncdump to be installed in /usr/local/
-
-
+Fortunately if you installed `netcdf` using [Homebrew](http://brew.sh) (with 
+the default settings) then `ncdump` should exist in the correct location 
+already.
 
 Installing
 -----------
+Download one of the releases and copy the QLNetcdf.qlgenerator file to your 
+'~/Library/QuickLook/` directory (or `/Library/QuickLook/` to make the plugin 
+available to all users).
 
-After compiling, copy the QLnetcdf.qlgenerator file to /Library/QuickLook or
-to ~/Library/QuickLook
+You may have to force the QuickLook Server to reload so it picks up the new 
+generator:
 
-
+    $ qlmnange -r
 
 
 Building
 --------
-
-Compiled with Xcode 4.6. Netcdf was installed with homebrew.
-netcdf: stable 4.2.1.1
-http://www.unidata.ucar.edu/software/netcdf
-
+The xcode project file is supplied with the project. The project has been built
+with xcode 4.6 and xcode 5.1
