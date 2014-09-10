@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E18D106D19C0FC5D00C893D1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E18D106B19C0FC5D00C893D1 /* LICENSE */; };
+		E18D106E19C0FC5D00C893D1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E18D106C19C0FC5D00C893D1 /* README.md */; };
 		E1A1603419BF9FCA00306185 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A1603319BF9FCA00306185 /* QuickLook.framework */; };
 		E1A1603619BF9FCA00306185 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A1603519BF9FCA00306185 /* ApplicationServices.framework */; };
 		E1A1603819BF9FCA00306185 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A1603719BF9FCA00306185 /* CoreServices.framework */; };
@@ -30,6 +32,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E18D106B19C0FC5D00C893D1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		E18D106C19C0FC5D00C893D1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 		E1A1603019BF9FCA00306185 /* QLNetcdf.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QLNetcdf.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A1603319BF9FCA00306185 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		E1A1603519BF9FCA00306185 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
@@ -100,6 +104,8 @@
 		E1A1603C19BF9FCA00306185 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E18D106B19C0FC5D00C893D1 /* LICENSE */,
+				E18D106C19C0FC5D00C893D1 /* README.md */,
 				E1A1603D19BF9FCA00306185 /* QLNetcdf-Info.plist */,
 				E1A1603E19BF9FCA00306185 /* InfoPlist.strings */,
 				E1A1604719BF9FCA00306185 /* QLNetcdf-Prefix.pch */,
@@ -171,6 +177,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E18D106E19C0FC5D00C893D1 /* README.md in Resources */,
+				E18D106D19C0FC5D00C893D1 /* LICENSE in Resources */,
 				E1A1604019BF9FCA00306185 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
