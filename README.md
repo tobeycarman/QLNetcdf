@@ -11,12 +11,6 @@ Fortunately if you installed `netcdf` using [Homebrew](http://brew.sh) (with
 the default settings) then `ncdump` should exist in the correct location 
 already.
 
-Example
--------
-Here is an example.
-
-![Screen shot](/images/example0.png?raw=true "QLNetcdf generator in action")
-
 Installing
 -----------
 Download one of the releases and copy the QLNetcdf.qlgenerator file to your 
@@ -28,6 +22,13 @@ generator:
 
     $ qlmnange -r
 
+Example
+-------
+Here is an example.
+
+<div style="text-align:center" style="height:400px">
+![Screen shot](/images/example0.png?raw=true "QLNetcdf generator in action")
+</div>
 
 Building
 --------
