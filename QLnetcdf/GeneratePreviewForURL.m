@@ -4,7 +4,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-#include <netcdf.h>
 OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview, CFURLRef url, CFStringRef contentTypeUTI, CFDictionaryRef options);
 void CancelPreviewGeneration(void *thisInterface, QLPreviewRequestRef preview);
 
@@ -23,14 +22,15 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
     @autoreleasepool {
         NSString* filepath = (__bridge NSString*)CFURLCopyFileSystemPath(url, kCFURLPOSIXPathStyle);
         
-        
+        //NSLog(@"This will print to the system.log...");
+
         /* pretty much directly copied from here:
          http://stackoverflow.com/questions/412562/execute-a-terminal-command-from-a-cocoa-app/696942#696942
         */
         NSTask *task;
         task = [[NSTask alloc] init];
         [task setLaunchPath: @"/usr/local/bin/ncdump"];
-        
+
         NSArray *arguments;
         arguments = [NSArray arrayWithObjects: @"-h", filepath, nil];
         [task setArguments: arguments];
