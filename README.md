@@ -15,8 +15,6 @@ Example
 -------
 Here is an example.
 
-[some txt](images/example0.png)
-
 ![Screen shot](/images/example0.png?raw=true "QLNetcdf generator in action")
 
 Installing
