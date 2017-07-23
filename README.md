@@ -28,6 +28,10 @@ generator:
 
     $ qlmnange -r
 
+Known Issues
+------------
+Sometimes the plugin fails to work (no preview is rendered). The best fix I
+have found is to force-relaunch Finder (`cmd+option+esc`)
 
 Building
 --------
